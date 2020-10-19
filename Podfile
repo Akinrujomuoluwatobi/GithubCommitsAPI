@@ -6,7 +6,10 @@ target 'GithubCommitsAPI' do
   use_frameworks!
 
   # Pods for GithubCommitsAPI
-pod 'Alamofire', '~> 5.2'
+pod 'Alamofire'
+pod 'SwiftyJSON', '~> 4.0'
+pod 'AlamofireObjectMapper'
+pod 'IQKeyboardManagerSwift', '~> 6.5'
 
   target 'GithubCommitsAPITests' do
     inherit! :search_paths

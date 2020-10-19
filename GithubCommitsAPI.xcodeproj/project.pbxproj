@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		04362DFA253D0A500043B670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04362DF8253D0A500043B670 /* LaunchScreen.storyboard */; };
 		04362E05253D0A500043B670 /* GithubCommitsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04362E04253D0A500043B670 /* GithubCommitsAPITests.swift */; };
 		04362E10253D0A500043B670 /* GithubCommitsAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04362E0F253D0A500043B670 /* GithubCommitsAPIUITests.swift */; };
+		04D10C92253D133200AF899F /* CommitDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D10C91253D133200AF899F /* CommitDetailsTableViewCell.swift */; };
 		553D2D08A183A29C0FEFBCCF /* Pods_GithubCommitsAPI_GithubCommitsAPIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0493D05F27BF27CE00DA0E /* Pods_GithubCommitsAPI_GithubCommitsAPIUITests.framework */; };
 		FBBB9775394007584C0942CE /* Pods_GithubCommitsAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E1CBDDFB8B68D11B89F4C8 /* Pods_GithubCommitsAPITests.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		04362E0B253D0A500043B670 /* GithubCommitsAPIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubCommitsAPIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04362E0F253D0A500043B670 /* GithubCommitsAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubCommitsAPIUITests.swift; sourceTree = "<group>"; };
 		04362E11253D0A500043B670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04D10C91253D133200AF899F /* CommitDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		08A1DC959884B7BD487D52EF /* Pods-GithubCommitsAPI-GithubCommitsAPIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubCommitsAPI-GithubCommitsAPIUITests.debug.xcconfig"; path = "Target Support Files/Pods-GithubCommitsAPI-GithubCommitsAPIUITests/Pods-GithubCommitsAPI-GithubCommitsAPIUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1DB2241CA302290A2202D9E7 /* Pods-GithubCommitsAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubCommitsAPI.release.xcconfig"; path = "Target Support Files/Pods-GithubCommitsAPI/Pods-GithubCommitsAPI.release.xcconfig"; sourceTree = "<group>"; };
 		2D7BA54E6E8BA5B6A0E6969B /* Pods-GithubCommitsAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubCommitsAPI.debug.xcconfig"; path = "Target Support Files/Pods-GithubCommitsAPI/Pods-GithubCommitsAPI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,9 +118,11 @@
 		04362DEC253D0A4B0043B670 /* GithubCommitsAPI */ = {
 			isa = PBXGroup;
 			children = (
+				04D10C93253D174C00AF899F /* Model */,
 				04362E1D253D0C300043B670 /* StartUpFiles */,
 				04362E1E253D0C630043B670 /* Controllers */,
 				04362E1F253D0C700043B670 /* Storyboards */,
+				04D10C90253D12E100AF899F /* TableViews */,
 				04362DFB253D0A500043B670 /* Info.plist */,
 			);
 			path = GithubCommitsAPI;
@@ -169,6 +173,21 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		04D10C90253D12E100AF899F /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				04D10C91253D133200AF899F /* CommitDetailsTableViewCell.swift */,
+			);
+			path = TableViews;
+			sourceTree = "<group>";
+		};
+		04D10C93253D174C00AF899F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0CFA50D854EFAF50A2F1EC1F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,7 +208,6 @@
 				3A77E4936CCB0C29681D3278 /* Pods-GithubCommitsAPITests.debug.xcconfig */,
 				5CCF104E0668505C6A668943 /* Pods-GithubCommitsAPITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -434,6 +452,7 @@
 			files = (
 				04362DF2253D0A4B0043B670 /* ViewController.swift in Sources */,
 				04362DEE253D0A4B0043B670 /* AppDelegate.swift in Sources */,
+				04D10C92253D133200AF899F /* CommitDetailsTableViewCell.swift in Sources */,
 				04362DF0253D0A4B0043B670 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
