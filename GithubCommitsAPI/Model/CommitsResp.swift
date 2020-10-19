@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-struct CommitsResp : Codable {
+struct CommitsResp: Codable {
     let sha : String?
     let node_id : String?
     let commit : Commit?
@@ -21,7 +21,7 @@ struct CommitsResp : Codable {
         case commit = "commit"
     }
 
-    init(_ dictionary: [String: Any]) throws {
+    init(_ dictionary: [String: Any]) {
         //let values = try dictionary.container(keyedBy: CodingKeys.self)
         sha = dictionary["sha"] as? String ?? ""
         node_id = dictionary["node_id"] as? String ?? ""
@@ -30,7 +30,7 @@ struct CommitsResp : Codable {
 
 }
 
-struct Commit : Codable {
+struct Commit: Codable {
     let author : Author?
     let message : String?
 
@@ -40,7 +40,7 @@ struct Commit : Codable {
         case message = "message"
     }
 
-    init(_ dictionary: [String: Any]) throws {
+    init(_ dictionary: [String: Any]) {
         author = dictionary["author"] as? Author
         message = dictionary["message"] as? String ?? ""
 
@@ -49,7 +49,7 @@ struct Commit : Codable {
 }
 
 
-struct Author : Codable {
+struct Author: Codable {
     let name : String?
     let email : String?
     let date : String?
@@ -61,7 +61,7 @@ struct Author : Codable {
         case date = "date"
     }
 
-    init(_ dictionary: [String: Any]) throws {
+    init(_ dictionary: [String: Any]) {
         name = dictionary["name"] as? String ?? ""
         email = dictionary["email"] as? String ?? ""
         date = dictionary["date"] as? String ?? ""
